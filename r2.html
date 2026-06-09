@@ -1,0 +1,233 @@
+// =============================
+// ADVANCED PORTFOLIO (React + Tailwind + Bootstrap)
+// Fully Ready + Attractive UI + Animations
+// =============================
+
+// 1. Setup
+// npm create vite@latest portfolio
+// cd portfolio
+// npm install
+// npm install tailwindcss postcss autoprefixer bootstrap react-icons framer-motion
+// npx tailwindcss init -p
+
+// =============================
+// tailwind.config.js
+// =============================
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#ff6ec4',
+        secondary: '#7873f5'
+      }
+    },
+  },
+  plugins: [],
+}
+
+// =============================
+// index.css
+// =============================
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+// =============================
+// main.jsx
+// =============================
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+
+// =============================
+// App.jsx
+// =============================
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Education from './components/Education'
+import Skills from './components/Skills'
+import Projects from './components/Projects'
+import Experience from './components/Experience'
+import Footer from './components/Footer'
+
+export default function App() {
+  return (
+    <div className="bg-gradient-to-r from-pink-200 via-purple-200 to-indigo-200">
+      <Navbar />
+      <Hero />
+      <About />
+      <Education />
+      <Skills />
+      <Projects />
+      <Experience />
+      <Footer />
+    </div>
+  )
+}
+
+// =============================
+// Navbar.jsx
+// =============================
+export default function Navbar() {
+  return (
+    <nav className="fixed w-full bg-white shadow z-50">
+      <div className="container mx-auto flex justify-between p-4">
+        <h1 className="font-bold text-xl">Portfolio</h1>
+        <div className="space-x-4">
+          {['home','about','education','skills','projects','experience'].map(i => (
+            <a key={i} href={`#${i}`} className="hover:text-pink-500 capitalize">{i}</a>
+          ))}
+        </div>
+      </div>
+    </nav>
+  )
+}
+
+// =============================
+// Hero.jsx
+// =============================
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
+import { motion } from 'framer-motion'
+
+export default function Hero() {
+  return (
+    <section id="home" className="h-screen flex items-center justify-center text-center">
+      <motion.div initial={{opacity:0,y:50}} animate={{opacity:1,y:0}}>
+        <h1 className="text-5xl font-bold">Your Name</h1>
+        <h2 className="text-xl mt-2 text-gray-700">Frontend Developer</h2>
+        <p className="mt-4 max-w-xl mx-auto">I build modern, responsive and beautiful websites.</p>
+
+        <div className="mt-6 space-x-4">
+          <a href="#" className="btn btn-primary">Download Resume</a>
+        </div>
+
+        <div className="flex justify-center space-x-6 mt-6 text-2xl">
+          <FaLinkedin className="hover:text-blue-600" />
+          <FaGithub className="hover:text-black" />
+          <FaInstagram className="hover:text-pink-500" />
+        </div>
+      </motion.div>
+    </section>
+  )
+}
+
+// =============================
+// About.jsx
+// =============================
+export default function About() {
+  return (
+    <section id="about" className="p-10 text-center">
+      <h2 className="text-3xl font-bold mb-4">About Me</h2>
+      <p>I am a passionate developer with strong problem-solving skills and creativity.</p>
+    </section>
+  )
+}
+
+// =============================
+// Education.jsx
+// =============================
+export default function Education() {
+  return (
+    <section id="education" className="p-10 text-center">
+      <h2 className="text-3xl font-bold">Education</h2>
+      <p>B.Tech in Computer Science</p>
+    </section>
+  )
+}
+
+// =============================
+// Skills.jsx
+// =============================
+export default function Skills() {
+  return (
+    <section id="skills" className="p-10 text-center">
+      <h2 className="text-3xl font-bold">Skills</h2>
+      <div className="grid grid-cols-2 gap-6 mt-6">
+        <div>
+          <h3 className="font-semibold">Coding Skills</h3>
+          <p>HTML, CSS, JavaScript, React</p>
+        </div>
+        <div>
+          <h3 className="font-semibold">Professional Skills</h3>
+          <p>Communication, Leadership</p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// =============================
+// Projects.jsx
+// =============================
+export default function Projects() {
+  return (
+    <section id="projects" className="p-10 text-center">
+      <h2 className="text-3xl font-bold">Projects</h2>
+      <div className="grid md:grid-cols-3 gap-6 mt-6">
+        <div className="bg-white p-4 shadow rounded">
+          <h3>Portfolio Website</h3>
+          <p>React + Tailwind</p>
+        </div>
+        <div className="bg-white p-4 shadow rounded">
+          <h3>E-commerce</h3>
+          <p>Full Stack Project</p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// =============================
+// Experience.jsx
+// =============================
+export default function Experience() {
+  return (
+    <section id="experience" className="p-10 text-center">
+      <h2 className="text-3xl font-bold">Experience</h2>
+      <p>Intern - Web Development</p>
+    </section>
+  )
+}
+
+// =============================
+// Footer.jsx
+// =============================
+export default function Footer() {
+  return (
+    <footer className="bg-gray-800 text-white text-center p-4">
+      <p>© 2026 Your Name | All Rights Reserved</p>
+    </footer>
+  )
+}
+
+// =============================
+// DEPLOYMENT
+// =============================
+
+// Vercel:
+// vercel
+
+// Netlify:
+// npm run build → upload dist
+
+// GitHub Pages:
+// npm install gh-pages
+// npm run deploy
