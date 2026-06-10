@@ -7,7 +7,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px;
 }
 
 body {
@@ -506,7 +505,6 @@ section.show {
   border-radius: 32px;
   padding: 80px 40px;
   margin-top: 150px;
-  scroll-margin-top: 120px;
 }
 
 .section-title {
@@ -548,9 +546,6 @@ section.show {
   transition:0.4s;
   text-align:center;
   position: absolute;
-}
-html{
-  scroll-padding-top: 120px;
 }
 
 .project-image{
@@ -660,7 +655,7 @@ html{
 }
 
 .github-link {
-  display: inline-block;
+  display: none;
   margin-top: 18px;
   color: #f8b4d9;
   font-weight: 700;
@@ -684,8 +679,7 @@ footer.copyright {
   }
 
   nav a {
-    margin-left: 0;
-    font-size: 14px;
+    margin-left: 16px;
   }
 }
 
@@ -712,122 +706,4 @@ footer.copyright {
     width: 220px;
     height: 220px;
   }
-  /* MOBILE RESPONSIVE FIX */
-@media (max-width: 768px){
-
-  header{
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-  }
-
-  nav{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  nav a{
-    font-size: 13px;
-    margin: 0;
-  }
-
-  section{
-    width: calc(100% - 20px);
-  }
-
-  .hero h1{
-    font-size: 2.5rem;
-  }
-
-  .hero h2{
-    font-size: 1.1rem;
-  }
-
-  .hero-text{
-    padding: 20px;
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .about h1,
-  .journey .title,
-  .section-title,
-  .main-title,
-  .contact-title{
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .about p,
-  .journey-card p,
-  .experience-card p,
-  .achievement-card p{
-    font-size: 14px;
-  }
-
-  .skills-container{
-    grid-template-columns: 1fr;
-  }
-
-  .skills-box{
-    width: 100%;
-  }
-
-  .project-card{
-    width: 100%;
-    margin: 15px auto;
-  }
-
-  .project-image{
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .achievement-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .contact-box{
-    width: 100%;
-  }
-
-  .profile img{
-    width: 200px;
-    height: 200px;
-  }
-}
-@media (max-width: 480px){
-
-  .hero h1{
-    font-size: 2rem;
-  }
-
-  .hero-text{
-    font-size: 13px;
-    padding: 16px;
-  }
-
-  .journey-card,
-  .experience-card,
-  .skills-box,
-  .achievement-card{
-    padding: 20px;
-  }
-
-  .profile img{
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    object-position: center top;
-  }
-
-  .section-title,
-  .main-title,
-  .journey .title,
-  .contact-title{
-    font-size: 1.8rem;
-  }
-}
 }
