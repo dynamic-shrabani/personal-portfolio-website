@@ -1421,163 +1421,187 @@ footer.copyright {
     width: 220px;
     height: 220px;
   }
-  /* ==== DESKTOP EXACT LOOK FOR MOBILE - FINAL ==== */
+ /* ==== DESKTOP JEMITI EXACT MOBILE - NO CONGESTION ==== */
 @media (max-width: 768px) {
-  /* 1. Header + Nav */
+  /* 1. Global Fix - Desktop jemiti container */
+  body {
+    overflow-x: hidden !important;
+  }
+  
   header { 
     position: static !important; 
     padding: 15px 0 !important;
   }
+  
   nav {
-    width: 100% !important;
+    width: 100% !important; 
     justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 10px !important;
+    flex-wrap: wrap !important; 
+    gap: 12px !important;
   }
-  nav a {
-    font-size: 14px !important;
-  }
+  nav a { font-size: 15px !important; }
 
-  /* 2. Hero - About Me section */
-  .hero { 
-    min-height: auto !important; 
-    padding: 40px 20px !important; 
-    text-align: center !important;
-  }
-  .hero h1 {
-    font-size: 2.5rem !important;
-  }
-  .hero p {
-    font-size: 1.05rem !important;
-  }
-  .hero-img {
-    width: 200px !important;
-    height: 200px !important;
-    margin: 0 auto 20px !important;
-  }
-  
-  /* 3. Sabu Section - Desktop jemiti gap */
+  /* 2. Sabu Section - Desktop jemiti width + gap */
   section {
-    width: calc(100% - 32px) !important;
-    padding: 50px 16px !important;
+    width: 100% !important; 
+    max-width: 100% !important;
+    padding: 60px 20px !important; /* Gap badheila */
     margin: 0 auto !important;
+    box-sizing: border-box !important;
   }
   
-  .projects-section,
-  .achievements-section,
-  .about,
-  .journey,
-  .experience-section,
-  .skills-section {
-    margin-top: 50px !important;
-  }
-
-  /* 4. Heading bada */
-  .section-title, .main-title, .about h1, .skills h2, .journey h2 {
-    font-size: 2.3rem !important;
-    text-align: center !important;
-    margin-bottom: 30px !important;
-  }
-
-  /* 5. About text */
-  .about-content {
-    text-align: center !important;
-  }
-  .about p {
-    font-size: 1.05rem !important;
-    line-height: 1.7 !important;
-  }
-
-  /* 6. Journey + Experience Cards */
-  .journey-card, .experience-card {
-    width: 100% !important;
-    padding: 24px !important;
-    margin-bottom: 20px !important;
-  }
-  .journey-card h3, .experience-card h3 {
-    font-size: 1.4rem !important;
-  }
-  .journey-card p, .experience-card p {
-    font-size: 1.05rem !important;
-    line-height: 1.7 !important;
-  }
-
-  /* 7. Skills - 2 ta box upara tala */
-  .skills-container {
-    flex-direction: column !important;
-    gap: 25px !important;
-  }
-  .skill-box {
-    width: 100% !important;
-    padding: 24px !important;
-  }
-
-  /* 8. PROJECT CARD - Desktop jemiti bada size */
-  .project-card {
-    position: relative !important;
-    overflow: hidden !important;
-    height: auto !important;
+  .projects-section, .achievements-section, .about, 
+  .journey, .experience-section, .skills-section, .contact {
+    margin-top: 0px !important; /* Section bhitare gap achi */
     margin-bottom: 40px !important;
   }
-  
-  .project-image {
-    height: 420px !important;
-    border-radius: 16px !important;
-    display: block;
-  }
-  
-  .project-overlay {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    opacity: 1 !important;
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.98) 85%) !important;
-    border-radius: 16px !important;
-    padding: 30px 20px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
+
+  /* 3. Heading Bada - Desktop jemiti */
+  .section-title, .main-title, .about h1, .skills h2, 
+  .journey h2, .projects h2, .achievements h2, .contact h2 {
+    font-size: 2.4rem !important; 
     text-align: center !important;
-  }
-  
-  .project-overlay h3 {
-    font-size: 1.7rem !important;
-    margin-bottom: 12px !important;
-    color: #f472b6 !important;
-  }
-  
-  .project-overlay p {
-    font-size: 1.05rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 16px !important;
-  }
-  
-  .tech-stack {
-    font-size: 0.95rem !important;
-    margin-bottom: 20px !important;
-  }
-  
-  .github-btn, .portfolio-btn {
-    display: inline-block !important;
-    padding: 14px 28px !important;
-    font-size: 17px !important;
+    margin-bottom: 40px !important; 
+    line-height: 1.2 !important;
   }
 
-  /* 9. Achievements - 1 line re 1 ta */
-  .achievements-grid {
-    grid-template-columns: 1fr !important;
+  /* 4. HERO / ABOUT ME - Desktop jemiti center */
+  .hero { 
+    min-height: auto !important; 
+    padding: 60px 20px !important; 
+    text-align: center !important;
+  }
+  .hero h1 { font-size: 2.8rem !important; margin-bottom: 15px !important; }
+  .hero p { font-size: 1.1rem !important; line-height: 1.7 !important; }
+  .hero-img {
+    width: 220px !important; height: 220px !important;
+    margin: 0 auto 25px !important;
+  }
+  .about-content { text-align: center !important; }
+  .about p { font-size: 1.1rem !important; line-height: 1.8 !important; }
+
+  /* 5. JOURNEY/EXPERIENCE - DESKTOP JEMITI CLEAR STRUCTURE */
+  .journey, .experience-section {
+    padding: 60px 20px !important;
+  }
+  /* Timeline line bayaku + mota */
+  .journey::before, .experience-section::before {
+    left: 10px !important; 
+    width: 3px !important;
+    background: #f472b6 !important;
+  }
+  .journey-card, .experience-card {
+    width: calc(100% - 40px) !important; 
+    padding: 32px 24px !important; /* Padding bada */
+    margin-bottom: 35px !important; 
+    margin-left: 40px !important; /* Timeline ru dura */
+  }
+  /* Timeline dot thik jaga re */
+  .journey-card::before, .experience-card::before {
+    left: -46px !important; 
+    width: 18px !important; 
+    height: 18px !important;
+  }
+  .journey-card h3, .experience-card h3 {
+    font-size: 1.6rem !important; 
+    margin-bottom: 15px !important;
+    line-height: 1.3 !important;
+  }
+  .journey-card p, .experience-card p {
+    font-size: 1.1rem !important; 
+    line-height: 1.9 !important; /* Gap bada - Congested fix */
+    word-spacing: 1.5px !important; 
+  }
+
+  /* 6. SKILLS - 2 ta box upara tala, bada */
+  .skills-container {
+    flex-direction: column !important; 
     gap: 30px !important;
   }
-  .cert-card {
-    padding: 20px !important;
+  .skill-box {
+    width: 100% !important; 
+    padding: 30px !important;
   }
+  .skill-box h3 { font-size: 1.5rem !important; margin-bottom: 20px !important; }
+  .skill-name { font-size: 1.1rem !important; }
+  .skill-bar { height: 12px !important; }
+
+  /* 7. PROJECTS - HOVER EFFECT + BADA SIZE */
+  .project-card {
+    position: relative !important; 
+    overflow: hidden !important;
+    height: auto !important; 
+    margin-bottom: 50px !important;
+  }
+  .project-image {
+    height: 450px !important; /* Bada image */
+    border-radius: 16px !important; 
+    display: block;
+  }
+  /* TOUCH KALE HI DEKHIBA, NAHELE GAYEB */
+  .project-overlay {
+    position: absolute !important; 
+    top: 0 !important; 
+    left: 0 !important;
+    width: 100% !important; 
+    height: 100% !important;
+    opacity: 0 !important; /* Default gayeb */
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.98) 85%) !important;
+    border-radius: 16px !important; 
+    padding: 35px 25px !important;
+    display: flex !important; 
+    flex-direction: column !important;
+    justify-content: flex-end !important; 
+    align-items: center !important;
+    text-align: center !important; 
+    transition: opacity 0.3s ease !important;
+  }
+  .project-card:hover .project-overlay,
+  .project-card:active .project-overlay {
+    opacity: 1 !important; /* Touch kale asiba */
+  }
+  .project-overlay h3 {
+    font-size: 1.8rem !important; 
+    margin-bottom: 15px !important;
+    color: #f472b6 !important;
+  }
+  .project-overlay p {
+    font-size: 1.1rem !important; 
+    line-height: 1.7 !important;
+    margin-bottom: 20px !important;
+  }
+  .tech-stack {
+    font-size: 1rem !important; 
+    margin-bottom: 25px !important;
+  }
+  .github-btn, .portfolio-btn {
+    display: inline-block !important; 
+    padding: 15px 30px !important;
+    font-size: 18px !important;
+  }
+
+  /* 8. ACHIEVEMENTS - 1 line re 1 ta, bada */
+  .achievements-grid {
+    grid-template-columns: 1fr !important; 
+    gap: 40px !important;
+  }
+  .cert-card { padding: 25px !important; }
   .cert-image {
-    height: 280px !important;
+    height: 300px !important; 
     object-fit: contain !important;
     background: #fff !important;
+  }
+  .cert-card h3 { font-size: 1.4rem !important; }
+  .cert-card p { font-size: 1.05rem !important; line-height: 1.7 !important; }
+
+  /* 9. CONTACT */
+  .contact form {
+    width: 100% !important; 
+    padding: 30px 20px !important;
+  }
+  .contact input, .contact textarea {
+    font-size: 1.1rem !important; 
+    padding: 15px !important;
   }
 }
 }
