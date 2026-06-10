@@ -1421,122 +1421,69 @@ footer.copyright {
     width: 220px;
     height: 220px;
   }
-  /* MOBILE RESPONSIVE FIX */
-@media (max-width: 768px){
-
-  header{
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
+  /* ==== EXACT DESKTOP STRUCTURE FOR MOBILE - No color change ==== */
+  @media (max-width: 768px) {
+  /* 1. Fixed header hataiba - se pain space nashta heuchi */
+  header { 
+    position: static !important; 
+  }
+  
+  /* 2. Hero 100vh hataiba - bada empty space fix */
+  .hero { 
+    min-height: auto !important; 
+    padding-top: 30px !important; 
+  }
+  
+  /* 3. Section side gap fix - congested lagiba nahi */
+  section {
+    width: calc(100% - 24px) !important;
+    padding: 40px 12px !important;
+  }
+  
+  /* 4. Margin-top kamaiba - Sahil ra site jemiti gap achi */
+  .projects-section,
+  .achievements-section,
+  .about,
+  .journey,
+  .experience-section,
+  .skills-section {
+    margin-top: 40px !important;
   }
 
-  nav{
-    display: flex;
-    flex-wrap: wrap;
+  /* 5. Project overlay mobile re show kariba - GitHub button pain */
+  .project-overlay {
+    position: static !important;
+    opacity: 1 !important;
+    border-radius: 0 0 16px 16px;
+  }
+  .project-card {
+    overflow: visible !important;
+  }
+
+  /* 6. Achievement photo pura dekhaiba */
+  .cert-image {
+    object-fit: contain !important;
+    background: #fff;
+  }
+  
+  /* 7. Nav bar wrap - 2 line re asile bhi clean lagiba */
+  nav {
+    width: 100%;
     justify-content: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  nav a {
+    font-size: 13px !important;
   }
 
-  nav a{
-    font-size: 13px;
-    margin: 0;
+  /* 8. Font size auto adjust - cut heba nahi */
+  .section-title, .main-title, .about h1 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+    word-break: break-word;
   }
-
-  section{
-    width: calc(100% - 20px);
-  }
-
-  .hero h1{
-    font-size: 2.5rem;
-  }
-
-  .hero h2{
-    font-size: 1.1rem;
-  }
-
-  .hero-text{
-    padding: 20px;
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .about h1,
-  .journey .title,
-  .section-title,
-  .main-title,
-  .contact-title{
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .about p,
-  .journey-card p,
-  .experience-card p,
-  .achievement-card p{
-    font-size: 14px;
-  }
-
-  .skills-container{
-    grid-template-columns: 1fr;
-  }
-
-  .skills-box{
-    width: 100%;
-  }
-
-  .project-card{
-    width: 100%;
-    margin: 15px auto;
-  }
-
-  .project-image{
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .achievement-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .contact-box{
-    width: 100%;
-  }
-
-  .profile img{
-    width: 200px;
-    height: 200px;
-  }
-}
-@media (max-width: 480px){
-
-  .hero h1{
-    font-size: 2rem;
-  }
-
-  .hero-text{
-    font-size: 13px;
-    padding: 16px;
-  }
-
-  .journey-card,
-  .experience-card,
-  .skills-box,
-  .achievement-card{
-    padding: 20px;
-  }
-
-  .profile img{
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    object-position: center top;
-  }
-
-  .section-title,
-  .main-title,
-  .journey .title,
-  .contact-title{
-    font-size: 1.8rem;
+  .hero h1 {
+    font-size: clamp(2.2rem, 10vw, 3.5rem) !important;
   }
 }
 }
