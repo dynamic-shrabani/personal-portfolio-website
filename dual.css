@@ -1306,7 +1306,7 @@ html{
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: center; 
 }
 
 .cert-image-container {
@@ -1493,6 +1493,14 @@ nav a{
   .hero-text{
     padding:20px;
   }
+  .hero-text p{
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .about p{
+    font-size: 14px;
+    line-height: 1.7;
+  }
 
   .about,
   .journey,
@@ -1570,12 +1578,12 @@ nav a{
     object-position: center 20%;
   }
   .hero-text p{
-      font-size: 15px;
-      line-height: 1.8;
+      font-size: 14px;
+      line-height: 1.7;
   }
   .about p{
-      font-size: 15px;
-      line-height: 1.8;
+      font-size: 14px;
+      line-height: 1.7;
   }
   .journey-card p,
   .experience-card p,
