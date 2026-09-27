@@ -580,6 +580,16 @@ section.show {
   width:fit-content;
 }
 
+.Streamlit-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 20px;
+  border:2px solid white;
+  color:white;
+  text-decoration:none;
+  width:fit-content;
+}
+
 .achievement-card {
   background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(148, 163, 184, 0.14);
